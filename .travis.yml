@@ -25,10 +25,10 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
-      branch: master
+      branch: krew-release-bot
   - provider: script
     script:
       - env GITHUB_TOKEN=${GITHUB_OAUTH_TOKEN} bash scripts/update-krew-index.sh
     on:
       tags: true
-      branch: master
+      branch: krew-release-bot
